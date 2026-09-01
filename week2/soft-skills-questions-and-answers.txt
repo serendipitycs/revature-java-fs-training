@@ -1,0 +1,38 @@
+Q1 - How do you handle a heavy workload?
+
+Sometimes I'll find myself in situations where multiple projects or tasks overlap, sometimes in combination with routine daily tasks. This often results in a heavy workload which can lead to missed deadlines or lower quality work. In a situation like this, the first steps I'd take would be to quickly organize and prioritize the work at hand. Once I have a clear picture of what needs to be done, I can communicate with my manager to offset some work with additional help or increase deadlines to allow time for my high priority tasks to be completed to a quality standard. This often results in the most efficient way to work through a heavy workload while not being overly rushed. Even in worst case scenarios this methodology will at the very least make sure my manager is aware of my workload and we are aligned on my priorities.
+
+Q2 - How should you handle a difficult team member?
+
+It's not too uncommon a situation to have to deal with someone being difficult whether it be a client, customer, or colleague. In all situations I find it critical that I maintain a sense of professionally regardless of the situation. I'm going to prioritize  trying to deescalate arguments, calm the situation, and try and understand where the difficult person is coming from. With their perspective in mind it becomes much easier for me to cooperate with them and still progress towards our shared objectives. If the person in question becomes to difficult to work with despite my proactive and understanding to the point of harming mine or the team's output, it might become necessary to escalate to a manager or HR. Ultimately it should always be the goal to interpersonally work things out between each other through compromise and understanding to create an effective workspace and team.
+
+Q3 - How do you handle a particularly difficult task?
+
+Projects can often lead to complex or difficult tasks that become unwieldy and overwhelming. The first steps for me is to identify any major knowledge gaps that would prevent me from understanding key aspects of the task. Sometimes this might require asking experienced team members for advice. This is often an overlooked step as I believe many people naturally want to immediately tackle as much as they can within their understanding but down the road it could lead to "tech debt" or restructuring that could have been avoided if the task was properly understood. Breaking a task apart into smaller tasks often makes it easier too, allowing me to slowly tackle more approachable sub-tasks piece by piece. These smaller tasks can furthermore be distributed to other team members in situations where working alone in not feasible.
+
+Q4 - How do you handle disagreements on a project?
+
+Disagreements can come up during the course of a project. In a situation where I might not like a team members approach to a project the first thing I would do is try and ask them questions to understand their perspective on why they approach the project that particular way. In some cases my disagreements could be immediately resolved by learning of something I didn't know before. Other times it enables me an opportunity to share my knowledge and understanding to possibly show them something to get them onboard with my approach. Through this discourse the majority of disagreements can be resolved with either persons approach, or in some cases just enable both parties to have a better understanding of the other perspective and hopefully work towards a healthy compromise.
+
+Q5 - How do you handle a project not going according to plan?
+
+Delays, mismanagement, or cross-team dependencies are a few of many possible ways a project wont end up going according to plan. In any case, its my responsibility to be adaptable and overcome any new challenges I encounter to the best of my ability. In the case of something catastrophic or events that could lead to lead to delays in project deliverables, its very important to notify the manager and PM as soon as possible to ask for guidance and avoid an unpleasant surprise as much as possible. Additionally, I should try my best to create guardrails to prevent a future similar issue, that might be making a plan, eliminating dependencies, or whatever the situation calls for. In some cases the problem was entirely out of my control and I should focus on damage mitigation to the best of my ability. Ultimately, I must try to make the best of the situation.
+
+Q6 - How do you handle a large increase of project scope?
+
+
+
+Q7 - How do you approach a task with limited to no experience with it?
+
+
+
+Q8 - How do you go about describing complex ideas to non-technical colleague or client?
+
+
+
+Q9 - How do you handle critical feedback?
+
+
+
+Q10 - How do you ensure project completetion in an efficient manner?
+
