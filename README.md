@@ -1,2 +1,2 @@
-## Primary Repo for Sylvie's Java Full Stack Training (Revature)
+## Primary Repo for Sylvie's Java Full Stack Training Submissions (Revature)
 
