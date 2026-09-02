@@ -1,0 +1,13 @@
+Java                 | 4
+OOP concepts         | 4
+SQL                  | 5
+HTML/CSS/JavaScript  | 5
+React/Angular        | 2
+Git/Github           | 5
+Communication        | 4
+
+Weakest:
+
+1. React/Angular - Least amount of experience compared to the rest of these topics (also not covered yet in training).
+2. OOP concepts - Functionally working with them isn't too weak, but could use some work when explaining concepts such as the 4 pillars in interview setting.
+3. Java - Comfortable at the current level but little experience with advanced Java or any Java frameworks.
