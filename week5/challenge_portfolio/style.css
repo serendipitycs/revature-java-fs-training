@@ -1,0 +1,76 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  margin: 0 30%;
+  background: #c085de;
+  background: linear-gradient(90deg,rgba(192, 133, 222, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
+}
+
+p {
+    margin: 0px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+ul {
+    margin-top: 3px;
+    padding-left: 15px;
+}
+
+li > p {
+    font-size: 14px;
+}
+
+.section {
+    margin: 10px 0px;
+    width: 500px;
+    background-color: lightgray;
+    padding: 20px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+}
+
+.date {
+    margin-left: 10px;
+    color: gray;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    padding: 0px 2px;
+    height: 25px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-split {
+    display: flex;
+}
+
+.margin-r {
+    margin-right: 20px;
+}
+
+.title {
+    margin-bottom: 0px;
+}
+
+.company {
+    margin: 0px 0px 0px 4px;
+    color: purple;
+}
+
+.degree {
+    color: purple;
+}
