@@ -1,19 +1,679 @@
-2026-09-28T14:19:39.849-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] c.s.s.SprigchallengeApplication          : Starting SprigchallengeApplication using Java 25.0.4.1 with PID 37334 (/Users/sylvie/Revature/revature-java-fs-training/week6/sprigchallenge/target/classes started by sylvie in /Users/sylvie/Revature/revature-java-fs-training/week6/sprigchallenge)
-2026-09-28T14:19:39.851-05:00 DEBUG 37334 --- [sprigchallenge] [restartedMain] c.s.s.SprigchallengeApplication          : Running with Spring Boot v4.1.1, Spring v7.0.9
-2026-09-28T14:19:39.851-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] c.s.s.SprigchallengeApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-28T14:19:39.879-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-09-28T14:19:39.879-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-09-28T14:19:40.422-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-09-28T14:19:40.430-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-28T14:19:40.430-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-09-28T14:19:40.444-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 564 ms
-2026-09-28T14:19:40.747-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-09-28T14:19:40.815-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-09-28T14:19:40.884-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-09-28T14:19:40.889-05:00  INFO 37334 --- [sprigchallenge] [restartedMain] c.s.s.SprigchallengeApplication          : Started SprigchallengeApplication in 1.263 seconds (process running for 1.721)
-2026-09-28T14:19:41.405-05:00  INFO 37334 --- [sprigchallenge] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-28T14:19:41.406-05:00  INFO 37334 --- [sprigchallenge] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-28T14:19:41.407-05:00  INFO 37334 --- [sprigchallenge] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-28T14:20:48.671-05:00  INFO 37334 --- [sprigchallenge] [http-nio-8080-exec-1] c.s.s.controllers.DefaultController      : Somebody hit the chal1 endpoint
-2026-09-28T14:21:09.714-05:00  INFO 37334 --- [sprigchallenge] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-09-28T14:21:09.720-05:00  INFO 37334 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:13:15.319-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T09:13:15.329-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T09:13:16.074-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:13:16.091-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:13:16.617-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:13:16.630-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:13:16.630-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:13:16.656-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1326 ms
+2026-10-02T09:13:16.879-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:13:16.935-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T09:13:17.325-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:13:17.354-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T09:13:17.539-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@23198221
+2026-10-02T09:13:17.540-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T09:13:17.610-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:13:18.345-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:13:18.411-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:13:18.533-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:13:19.135-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:13:19.197-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:13:19.464-05:00  INFO 69062 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T09:13:19.464-05:00  INFO 69062 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T09:13:19.468-05:00  INFO 69062 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-10-02T09:20:32.503-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "4fe"]
+2026-10-02T09:25:53.433-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2026-10-02T09:25:53.446-05:00  INFO 69062 --- [sprigchallenge] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:25:53.453-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:25:53.464-05:00  INFO 69062 --- [sprigchallenge] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:25:53.471-05:00  INFO 69062 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T09:25:53.474-05:00  INFO 69062 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T09:25:53.791-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:25:53.795-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:25:53.933-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:25:53.935-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:25:53.936-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:25:53.945-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 339 ms
+2026-10-02T09:25:53.999-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:25:54.019-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:25:54.020-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-02T09:25:54.082-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@18d4839e
+2026-10-02T09:25:54.083-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-02T09:25:54.101-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:25:54.136-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:25:54.153-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:25:54.186-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:25:54.327-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:25:54.347-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:25:54.352-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T09:29:45.108-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2026-10-02T09:29:45.119-05:00  INFO 69062 --- [sprigchallenge] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:29:45.122-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:29:45.129-05:00  INFO 69062 --- [sprigchallenge] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:29:45.132-05:00  INFO 69062 --- [sprigchallenge] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-02T09:29:45.135-05:00  INFO 69062 --- [sprigchallenge] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-02T09:29:45.422-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:29:45.425-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:29:45.505-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:29:45.506-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:29:45.507-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:29:45.515-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 221 ms
+2026-10-02T09:29:45.565-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:29:45.583-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:29:45.584-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-02T09:29:45.618-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@71b5cd61
+2026-10-02T09:29:45.618-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-02T09:29:45.629-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:29:45.656-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:29:45.676-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:29:45.704-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:29:45.830-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:29:45.847-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:29:45.851-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T09:29:55.116-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T09:29:55.117-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T09:29:55.119-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-02T09:29:55.135-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "4fe"]
+2026-10-02T09:34:47.355-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.sylvie.sprigchallenge.domain.Student> com.sylvie.sprigchallenge.rest.StudentController.insertStudent(com.sylvie.sprigchallenge.domain.Student): [Field error in object 'student' on field 'email': rejected value [notanemail]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@275523d1,.*]; default message [must be a well-formed email address]] ]
+2026-10-02T09:35:19.266-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction]
+2026-10-02T09:38:35.840-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "ewc"]
+2026-10-02T09:40:06.422-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T09:40:06.455-05:00  INFO 69062 --- [sprigchallenge] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:40:06.462-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:40:06.471-05:00  INFO 69062 --- [sprigchallenge] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:40:06.473-05:00  INFO 69062 --- [sprigchallenge] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-02T09:40:06.479-05:00  INFO 69062 --- [sprigchallenge] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-02T09:40:06.746-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:40:06.749-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:40:06.845-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:40:06.847-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:40:06.847-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:40:06.854-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 243 ms
+2026-10-02T09:40:06.903-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:40:06.921-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:40:06.923-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-02T09:40:06.959-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@6b5e3959
+2026-10-02T09:40:06.960-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-02T09:40:06.974-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:40:07.009-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:40:07.037-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:40:07.077-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:40:07.216-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:40:07.235-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:40:07.241-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T09:41:14.026-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-10-02T09:41:14.029-05:00  INFO 69062 --- [sprigchallenge] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:41:14.031-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:41:14.033-05:00  INFO 69062 --- [sprigchallenge] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:41:14.034-05:00  INFO 69062 --- [sprigchallenge] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-02T09:41:14.035-05:00  INFO 69062 --- [sprigchallenge] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-02T09:41:14.240-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:41:14.243-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:41:14.315-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:41:14.316-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:41:14.316-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:41:14.325-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 210 ms
+2026-10-02T09:41:14.383-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:41:14.408-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:41:14.409-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-02T09:41:14.437-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@7c669c5c
+2026-10-02T09:41:14.438-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-02T09:41:14.455-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:41:14.482-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:41:14.501-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:41:14.527-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:41:14.634-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:41:14.648-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:41:14.651-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T09:41:27.760-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T09:41:27.762-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T09:41:27.776-05:00  INFO 69062 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2026-10-02T09:41:27.790-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-10-02T09:41:46.985-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public com.sylvie.sprigchallenge.domain.Student com.sylvie.sprigchallenge.rest.StudentController.updateStudent(int,com.sylvie.sprigchallenge.domain.Student): [Field error in object 'student' on field 'email': rejected value [dsadasda]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@275523d1,.*]; default message [must be a well-formed email address]] ]
+2026-10-02T09:42:38.929-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public com.sylvie.sprigchallenge.domain.Student com.sylvie.sprigchallenge.rest.StudentController.updateStudent(int,com.sylvie.sprigchallenge.domain.Student) with 2 errors: [Field error in object 'student' on field 'lastName': rejected value [Swadddddddddddddddddgson]; codes [Size.student.lastName,Size.lastName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.lastName,lastName]; arguments []; default message [lastName],20,0]; default message [size must be between 0 and 20]] [Field error in object 'student' on field 'email': rejected value [dsadasda]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@275523d1,.*]; default message [must be a well-formed email address]] ]
+2026-10-02T09:43:03.509-05:00  WARN 69062 --- [sprigchallenge] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.sylvie.sprigchallenge.domain.Student> com.sylvie.sprigchallenge.rest.StudentController.insertStudent(com.sylvie.sprigchallenge.domain.Student): [Field error in object 'student' on field 'email': rejected value [kittyca]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@275523d1,.*]; default message [must be a well-formed email address]] ]
+2026-10-02T09:49:23.086-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
+2026-10-02T09:49:23.092-05:00  INFO 69062 --- [sprigchallenge] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:49:23.094-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:49:23.098-05:00  INFO 69062 --- [sprigchallenge] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:49:23.099-05:00  INFO 69062 --- [sprigchallenge] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-10-02T09:49:23.101-05:00  INFO 69062 --- [sprigchallenge] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-10-02T09:49:23.371-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:49:23.373-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:49:23.439-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:49:23.440-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:49:23.440-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:49:23.446-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 213 ms
+2026-10-02T09:49:23.490-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:49:23.510-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:49:23.510-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-02T09:49:23.541-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@557c53a0
+2026-10-02T09:49:23.542-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-02T09:49:23.559-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:49:23.593-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:49:23.611-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:49:23.637-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:49:23.740-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:49:23.758-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:49:23.764-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T09:49:25.136-05:00  INFO 69062 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2026-10-02T09:49:25.138-05:00  INFO 69062 --- [sprigchallenge] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T09:49:25.139-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T09:49:25.141-05:00  INFO 69062 --- [sprigchallenge] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:49:25.141-05:00  INFO 69062 --- [sprigchallenge] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-10-02T09:49:25.142-05:00  INFO 69062 --- [sprigchallenge] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-10-02T09:49:25.294-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T09:49:25.297-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-10-02T09:49:25.353-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T09:49:25.353-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T09:49:25.353-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T09:49:25.358-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 149 ms
+2026-10-02T09:49:25.394-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T09:49:25.410-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T09:49:25.411-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-02T09:49:25.435-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@6025f4f
+2026-10-02T09:49:25.435-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-02T09:49:25.449-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T09:49:25.477-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T09:49:25.491-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T09:49:25.518-05:00  WARN 69062 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T09:49:25.627-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T09:49:25.646-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T09:49:25.650-05:00  INFO 69062 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T10:06:20.388-05:00  INFO 69062 --- [sprigchallenge] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T10:06:20.394-05:00  INFO 69062 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T10:06:20.399-05:00  INFO 69062 --- [sprigchallenge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T10:06:20.401-05:00  INFO 69062 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-10-02T10:06:20.403-05:00  INFO 69062 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-10-02T13:23:05.011-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T13:23:05.014-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T13:23:05.692-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T13:23:05.737-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
+2026-10-02T13:23:06.108-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T13:23:06.118-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T13:23:06.118-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T13:23:06.142-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1127 ms
+2026-10-02T13:23:06.303-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T13:23:06.340-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T13:23:06.628-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T13:23:06.651-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T13:23:06.790-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f23c376
+2026-10-02T13:23:06.791-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T13:23:06.850-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T13:23:07.557-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T13:23:07.690-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:23:07.790-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T13:23:08.002-05:00  WARN 75934 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T13:23:08.444-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T13:23:08.520-05:00  INFO 75934 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T13:23:08.733-05:00  INFO 75934 --- [sprigchallenge] [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T13:23:08.733-05:00  INFO 75934 --- [sprigchallenge] [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T13:23:08.734-05:00  INFO 75934 --- [sprigchallenge] [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-02T13:23:35.049-05:00  INFO 75934 --- [sprigchallenge] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T13:23:35.058-05:00  INFO 75934 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T13:23:35.070-05:00  INFO 75934 --- [sprigchallenge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:23:35.077-05:00  INFO 75934 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T13:23:35.080-05:00  INFO 75934 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T13:25:43.803-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T13:25:43.805-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T13:25:44.367-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T13:25:44.415-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2026-10-02T13:25:44.788-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T13:25:44.799-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T13:25:44.799-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T13:25:44.827-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1021 ms
+2026-10-02T13:25:44.983-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T13:25:45.020-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T13:25:45.288-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T13:25:45.312-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T13:25:45.434-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16184950
+2026-10-02T13:25:45.435-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T13:25:45.496-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T13:25:46.142-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T13:25:46.214-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:25:46.313-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T13:25:46.476-05:00  WARN 76029 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T13:25:46.823-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T13:25:46.880-05:00  INFO 76029 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T13:25:47.397-05:00  INFO 76029 --- [sprigchallenge] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T13:25:47.398-05:00  INFO 76029 --- [sprigchallenge] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T13:25:47.400-05:00  INFO 76029 --- [sprigchallenge] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-02T13:25:55.906-05:00  INFO 76029 --- [sprigchallenge] [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x0e>0xa7p0x1e0x86u0xe30xa6s0xb340xda40xc97HB0xe6p0xc20x000x090xfd0xa60x070x120xd8'0x0fL0xf0 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:398) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:279) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-10-02T13:26:38.119-05:00  WARN 76029 --- [sprigchallenge] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-10-02T13:29:43.338-05:00  INFO 76029 --- [sprigchallenge] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T13:29:43.347-05:00  INFO 76029 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T13:29:43.355-05:00  INFO 76029 --- [sprigchallenge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:29:43.363-05:00  INFO 76029 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T13:29:43.366-05:00  INFO 76029 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T13:54:19.961-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T13:54:19.965-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T13:54:21.123-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T13:54:21.157-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 4 JPA repository interfaces.
+2026-10-02T13:54:21.514-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T13:54:21.524-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T13:54:21.524-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T13:54:21.546-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1581 ms
+2026-10-02T13:54:21.715-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T13:54:21.757-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T13:54:22.023-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T13:54:22.044-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T13:54:22.162-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f461f70
+2026-10-02T13:54:22.163-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T13:54:22.215-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T13:54:22.831-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T13:54:22.894-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:54:22.983-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T13:54:23.135-05:00  WARN 77281 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T13:54:23.539-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T13:54:23.592-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T13:54:23.949-05:00  INFO 77281 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T13:54:23.949-05:00  INFO 77281 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T13:54:23.950-05:00  INFO 77281 --- [sprigchallenge] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-02T13:56:39.681-05:00  INFO 77281 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T13:56:39.687-05:00  INFO 77281 --- [sprigchallenge] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T13:56:39.692-05:00  INFO 77281 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T13:56:39.697-05:00  INFO 77281 --- [sprigchallenge] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:56:39.700-05:00  INFO 77281 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T13:56:39.701-05:00  INFO 77281 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T13:56:39.882-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T13:56:39.889-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2026-10-02T13:56:39.958-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T13:56:39.959-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T13:56:39.959-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T13:56:39.965-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 188 ms
+2026-10-02T13:56:40.002-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T13:56:40.017-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T13:56:40.018-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-02T13:56:40.050-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4ac43b4e
+2026-10-02T13:56:40.051-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-02T13:56:40.062-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T13:56:40.119-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T13:56:40.165-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T13:56:40.234-05:00  WARN 77281 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T13:56:40.349-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T13:56:40.366-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T13:56:40.370-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T13:59:43.316-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T13:59:43.318-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T13:59:43.324-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-10-02T14:02:50.512-05:00  INFO 77281 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T14:02:50.516-05:00  INFO 77281 --- [sprigchallenge] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T14:02:50.517-05:00  INFO 77281 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T14:02:50.520-05:00  INFO 77281 --- [sprigchallenge] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:02:50.520-05:00  INFO 77281 --- [sprigchallenge] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-02T14:02:50.521-05:00  INFO 77281 --- [sprigchallenge] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-02T14:02:50.682-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T14:02:50.689-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2026-10-02T14:02:50.767-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T14:02:50.769-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T14:02:50.769-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T14:02:50.775-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 186 ms
+2026-10-02T14:02:50.824-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T14:02:50.840-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T14:02:50.841-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-02T14:02:50.868-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4c1a6543
+2026-10-02T14:02:50.868-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-02T14:02:50.880-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T14:02:50.931-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T14:02:50.967-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:02:51.049-05:00  WARN 77281 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T14:02:51.175-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T14:02:51.193-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T14:02:51.196-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T14:02:57.111-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T14:02:57.111-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T14:02:57.113-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-02T14:02:57.142-05:00  WARN 77281 --- [sprigchallenge] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Ignoring exception, response committed already: org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (501) exceeds the maximum allowed (500, from `StreamWriteConstraints.getMaxNestingDepth()`)
+2026-10-02T14:02:57.144-05:00  WARN 77281 --- [sprigchallenge] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (501) exceeds the maximum allowed (500, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2026-10-02T14:03:17.123-05:00  INFO 77281 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T14:03:17.134-05:00  INFO 77281 --- [sprigchallenge] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T14:03:17.136-05:00  INFO 77281 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T14:03:17.139-05:00  INFO 77281 --- [sprigchallenge] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:03:17.140-05:00  INFO 77281 --- [sprigchallenge] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-02T14:03:17.141-05:00  INFO 77281 --- [sprigchallenge] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-02T14:03:17.376-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T14:03:17.385-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2026-10-02T14:03:17.491-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T14:03:17.492-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T14:03:17.492-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T14:03:17.499-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 230 ms
+2026-10-02T14:03:17.539-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T14:03:17.553-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T14:03:17.554-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-02T14:03:17.594-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@4582d922
+2026-10-02T14:03:17.595-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-02T14:03:17.619-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T14:03:17.708-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T14:03:17.761-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:03:17.846-05:00  WARN 77281 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T14:03:18.043-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T14:03:18.067-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T14:03:18.072-05:00  INFO 77281 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T14:03:21.182-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T14:03:21.183-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T14:03:21.184-05:00  INFO 77281 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-02T14:03:33.950-05:00  INFO 77281 --- [sprigchallenge] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T14:03:33.956-05:00  INFO 77281 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T14:03:33.960-05:00  INFO 77281 --- [sprigchallenge] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:03:33.963-05:00  INFO 77281 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-02T14:03:33.964-05:00  INFO 77281 --- [sprigchallenge] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-02T14:07:14.370-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T14:07:14.371-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T14:07:14.785-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T14:07:14.820-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 4 JPA repository interfaces.
+2026-10-02T14:07:15.154-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T14:07:15.163-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T14:07:15.164-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T14:07:15.187-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 816 ms
+2026-10-02T14:07:15.325-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T14:07:15.354-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T14:07:15.588-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T14:07:15.605-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T14:07:15.709-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b20f3f0
+2026-10-02T14:07:15.710-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T14:07:15.761-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T14:07:16.358-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T14:07:16.422-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:07:16.510-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T14:07:16.641-05:00  WARN 77807 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T14:07:16.735-05:00  WARN 77807 --- [sprigchallenge] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'studentController' method 
+com.sylvie.sprigchallenge.rest.StudentController#getStudentsBySchoolName(String)
+to {GET [/api/students]}: There is already 'studentController' bean method
+com.sylvie.sprigchallenge.rest.StudentController#getAllStudents() mapped.
+2026-10-02T14:07:16.736-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:07:16.738-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T14:07:16.740-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T14:07:16.744-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-02T14:07:16.757-05:00  INFO 77807 --- [sprigchallenge] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-02T14:07:16.788-05:00 ERROR 77807 --- [sprigchallenge] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'studentController' method 
+com.sylvie.sprigchallenge.rest.StudentController#getStudentsBySchoolName(String)
+to {GET [/api/students]}: There is already 'studentController' bean method
+com.sylvie.sprigchallenge.rest.StudentController#getAllStudents() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.sylvie.sprigchallenge.SprigchallengeApplication.main(SprigchallengeApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'studentController' method 
+com.sylvie.sprigchallenge.rest.StudentController#getStudentsBySchoolName(String)
+to {GET [/api/students]}: There is already 'studentController' bean method
+com.sylvie.sprigchallenge.rest.StudentController#getAllStudents() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 21 common frames omitted
+
+2026-10-02T14:08:10.182-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T14:08:10.184-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T14:08:10.677-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T14:08:10.708-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2026-10-02T14:08:11.026-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T14:08:11.035-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T14:08:11.036-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T14:08:11.054-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 870 ms
+2026-10-02T14:08:11.194-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T14:08:11.226-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T14:08:11.473-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T14:08:11.492-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T14:08:11.606-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@709580d5
+2026-10-02T14:08:11.608-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T14:08:11.669-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T14:08:12.331-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T14:08:12.403-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:08:12.503-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T14:08:12.663-05:00  WARN 77847 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T14:08:12.985-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T14:08:13.033-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T14:08:13.652-05:00  INFO 77847 --- [sprigchallenge] [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T14:08:13.653-05:00  INFO 77847 --- [sprigchallenge] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T14:08:13.656-05:00  INFO 77847 --- [sprigchallenge] [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-02T14:29:02.501-05:00  INFO 77847 --- [sprigchallenge] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2026-10-02T14:29:02.531-05:00  INFO 77847 --- [sprigchallenge] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T14:29:02.539-05:00  INFO 77847 --- [sprigchallenge] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T14:29:02.559-05:00  INFO 77847 --- [sprigchallenge] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:29:02.567-05:00  INFO 77847 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T14:29:02.570-05:00  INFO 77847 --- [sprigchallenge] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T14:29:02.857-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T14:29:02.865-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2026-10-02T14:29:02.956-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T14:29:02.958-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T14:29:02.958-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T14:29:02.965-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 228 ms
+2026-10-02T14:29:03.015-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T14:29:03.034-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T14:29:03.035-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-02T14:29:03.072-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@76928f0d
+2026-10-02T14:29:03.073-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-02T14:29:03.082-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5433/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T14:29:03.139-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T14:29:03.186-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T14:29:03.264-05:00  WARN 77847 --- [sprigchallenge] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T14:29:03.398-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-02T14:29:03.416-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T14:29:03.420-05:00  INFO 77847 --- [sprigchallenge] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T14:29:17.468-05:00  INFO 77847 --- [sprigchallenge] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T14:29:17.473-05:00  INFO 77847 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T14:29:17.494-05:00  INFO 77847 --- [sprigchallenge] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2026-10-02T14:29:47.912-05:00  WARN 77847 --- [sprigchallenge] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'page': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "2?count=2"]
