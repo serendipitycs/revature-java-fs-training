@@ -90,4 +90,10 @@ public class StudentService {
         School school = schoolRepo.findById(id).orElseThrow(() -> new RecordNotFoundException("School not found with Id " + id));
         return school;
     }
+
+    @Transactional(readOnly = true)
+    public List<Student> getTopFiveStudentsAlphabeticallyBySchool(String school) {
+        School s = schoolRepo.findByName(school);
+        return studentRepo.findFirstFiveAlphabeticalStudentsFromSchool(s);
+    }
 }

@@ -66,4 +66,9 @@ public class StudentController {
     public List<Student> getStudentsBySchoolName(@RequestParam String school) {
         return studentService.findStudentsBySchoolName(school);
     }
+
+    @GetMapping(params = "topFiveFrom")
+    public List<Student> getTopFiveStudentsFromSchool(@RequestParam String topFiveFrom) {
+        return studentService.getTopFiveStudentsAlphabeticallyBySchool(topFiveFrom);
+    }
 }
