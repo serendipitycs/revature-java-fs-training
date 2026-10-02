@@ -1,9 +1,11 @@
 package com.sylvie.sprigchallenge.service;
 
 import com.sylvie.sprigchallenge.dao.*;
+import com.sylvie.sprigchallenge.domain.Course;
 import com.sylvie.sprigchallenge.domain.Enrollment;
 import com.sylvie.sprigchallenge.domain.School;
 import com.sylvie.sprigchallenge.domain.Student;
+import com.sylvie.sprigchallenge.dto.EnrollmentWriteDTO;
 import com.sylvie.sprigchallenge.dto.StudentWriteDTO;
 import com.sylvie.sprigchallenge.exceptions.RecordNotFoundException;
 import com.sylvie.sprigchallenge.exceptions.StudentErrorResponse;
@@ -95,5 +97,34 @@ public class StudentService {
     public List<Student> getTopFiveStudentsAlphabeticallyBySchool(String school) {
         School s = schoolRepo.findByName(school);
         return studentRepo.findFirstFiveAlphabeticalStudentsFromSchool(s);
+    }
+
+    @Transactional(readOnly = true)
+    public Course getCourseById(int id) {
+        Course course = courseRepo.findById(id).orElseThrow(() ->  new RecordNotFoundException(("Course Not Found with Id: " + id)));
+        return course;
+    }
+
+    @Transactional
+    public Enrollment insertEnrollment(EnrollmentWriteDTO enrollment) {
+        Student student = getStudentById(enrollment.getStudentId());
+        Course course = getCourseById(enrollment.getCourseId());
+        Enrollment newEnrollment = new Enrollment(enrollment.getGrade(),student,course);
+        return enrollmentRepo.save(newEnrollment);
+    }
+
+    @Transactional
+    public Course insertCourse(String name) {
+        return courseRepo.save(new Course(name));
+    }
+
+    @Transactional(readOnly = true)
+    public List<Course> getAllCourses() {
+        return courseRepo.findAll();
+    }
+
+    @Transactional(readOnly = true)
+    public List<Enrollment> getAllEnrollments() {
+        return enrollmentRepo.findAll();
     }
 }

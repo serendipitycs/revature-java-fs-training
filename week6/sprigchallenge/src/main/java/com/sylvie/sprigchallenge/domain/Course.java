@@ -1,5 +1,6 @@
 package com.sylvie.sprigchallenge.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -24,6 +25,7 @@ public class Course {
         orphanRemoval = true,
         cascade = CascadeType.ALL
     )
+    @JsonIgnore
     private List<Enrollment> enrollments = new ArrayList<>();
 
     public Course() {}

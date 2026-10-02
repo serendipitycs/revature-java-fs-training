@@ -30,8 +30,8 @@ public class Enrollment {
 
     public Enrollment() {}
 
-    public Enrollment(LocalDate enrollmentDate, String grade, Student student, Course course) {
-        this.enrollmentDate = enrollmentDate;
+    public Enrollment(String grade, Student student, Course course) {
+        this.enrollmentDate = LocalDate.now();
         this.grade = grade;
         this.student = student;
         this.course = course;
