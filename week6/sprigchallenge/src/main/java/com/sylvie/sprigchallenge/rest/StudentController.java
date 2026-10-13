@@ -8,6 +8,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -44,6 +47,11 @@ public class StudentController {
             ).body(savedStudent);
     }
 
+    @QueryMapping
+    public Student studentById(@Argument int id) {
+        return studentService.getStudentById(id);
+    }
+
     @GetMapping("/{id}")
     @Operation(summary = "Get a student", description = "Returns a student by its ID")
     @ApiResponse(responseCode = "200", description = "Student found")
@@ -69,6 +77,16 @@ public class StudentController {
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable int id, @Valid @RequestBody Student student){
         return studentService.updateStudent(id,student);
+    }
+
+    @MutationMapping
+    public Student createStudent(@Argument String firstName, @Argument String lastName, @Argument String email, @Argument int schoolId) {
+        StudentWriteDTO student = new StudentWriteDTO();
+        student.setLastName(lastName);
+        student.setFirstName(firstName);
+        student.setEmail(email);
+        student.setSchoolId(schoolId);
+        return studentService.insertStudent(student);
     }
 
     @GetMapping(params = "school")
