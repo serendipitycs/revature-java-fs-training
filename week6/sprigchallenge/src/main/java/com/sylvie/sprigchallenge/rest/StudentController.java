@@ -4,6 +4,9 @@ import com.sylvie.sprigchallenge.domain.School;
 import com.sylvie.sprigchallenge.domain.Student;
 import com.sylvie.sprigchallenge.dto.StudentWriteDTO;
 import com.sylvie.sprigchallenge.service.StudentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,12 +45,18 @@ public class StudentController {
     }
 
     @GetMapping("/{id}")
-    public Student getStudentById(@PathVariable int id){
+    @Operation(summary = "Get a student", description = "Returns a student by its ID")
+    @ApiResponse(responseCode = "200", description = "Student found")
+    @ApiResponse(responseCode = "404", description = "Student not found")
+    public Student getStudentById(@Parameter(description = "Unique student ID") @PathVariable int id){
         return studentService.getStudentById(id);
     }
 
     @GetMapping(params = "lastName")
-    public List<Student> getStudentByLastName(@RequestParam String lastName) {
+    @Operation(summary = "Get student(s)", description = "Returns all students by their last name")
+    @ApiResponse(responseCode = "200", description = "Student found")
+    @ApiResponse(responseCode = "404", description = "Student not found")
+    public List<Student> getStudentByLastName(@Parameter(description = "Student's last name") @RequestParam String lastName) {
         return studentService.getStudentsByLastName(lastName);
     }
 

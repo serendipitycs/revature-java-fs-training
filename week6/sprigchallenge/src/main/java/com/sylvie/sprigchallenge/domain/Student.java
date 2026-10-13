@@ -2,6 +2,7 @@ package com.sylvie.sprigchallenge.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -12,7 +13,9 @@ import java.util.List;
 
 @Entity
 @Table(name="student")
+@Schema(description = "Student information")
 public class Student {
+    @Schema(description = "Unique student identifier", example = "7")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -29,12 +32,18 @@ public class Student {
     @JsonIgnore
     private List<Enrollment> enrollments = new ArrayList<>();
 
+
+    @Schema(description = "Student's first name", example = "Kimi")
     @Size(max=20)
     @Column(name = "first_name", length = 45)
     private String firstName;
+
+    @Schema(description = "Student's last name", example = "Aaron")
     @Size(max=20)
     @Column(name = "last_name", length = 45)
     private String lastName;
+
+    @Schema(description = "Student's email address", example = "johnny@gmail.com")
     @Email
     @NotBlank
     @Column(name = "email", length = 45, nullable = false, unique = true)
